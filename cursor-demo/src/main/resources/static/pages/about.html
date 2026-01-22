@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于 - Netty HTTP 服务器</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ℹ️ 关于</h1>
+            <p class="subtitle">了解 Netty HTTP 服务器项目</p>
+        </header>
+
+        <nav class="nav-menu">
+            <a href="/" class="nav-item">首页</a>
+            <a href="/static/pages/api-demo.html" class="nav-item">API 演示</a>
+            <a href="/static/pages/about.html" class="nav-item active">关于</a>
+        </nav>
+
+        <main>
+            <section class="card">
+                <h2>📖 项目简介</h2>
+                <p>这是一个基于 Netty 框架实现的 HTTP 服务器示例项目，展示了如何使用 Netty 构建高性能的 Web 服务器。</p>
+            </section>
+
+            <section class="card">
+                <h2>🛠️ 技术栈</h2>
+                <ul class="feature-list">
+                    <li><strong>后端框架:</strong> Netty 4.1.104</li>
+                    <li><strong>编程语言:</strong> Java 11+</li>
+                    <li><strong>构建工具:</strong> Maven 3.x</li>
+                    <li><strong>日志框架:</strong> SLF4J + Logback</li>
+                    <li><strong>前端技术:</strong> HTML5, CSS3, JavaScript (ES6+)</li>
+                </ul>
+            </section>
+
+            <section class="card">
+                <h2>✨ 主要特性</h2>
+                <ul class="feature-list">
+                    <li>✅ 基于 Netty 的异步非阻塞 I/O</li>
+                    <li>✅ 支持 HTTP/1.1 协议</li>
+                    <li>✅ 静态文件服务</li>
+                    <li>✅ RESTful API 支持</li>
+                    <li>✅ 现代化响应式前端界面</li>
+                    <li>✅ 完整的错误处理机制</li>
+                </ul>
+            </section>
+
+            <section class="card">
+                <h2>📚 项目结构</h2>
+                <pre style="background: #f5f7fa; padding: 15px; border-radius: 6px; overflow-x: auto; font-family: monospace;">
+netty-http-server/
+├── src/
+│   └── main/
+│       ├── java/
+│       │   └── com/example/
+│       │       ├── HttpServer.java
+│       │       ├── HttpServerHandler.java
+│       │       └── StaticFileHandler.java
+│       └── resources/
+│           ├── static/
+│           │   ├── index.html
+│           │   ├── css/
+│           │   │   └── style.css
+│           │   ├── js/
+│           │   │   ├── main.js
+│           │   │   └── api-demo.js
+│           │   └── pages/
+│           │       ├── api-demo.html
+│           │       └── about.html
+│           └── logback.xml
+├── pom.xml
+└── README.md
+                </pre>
+            </section>
+
+            <section class="card">
+                <h2>🚀 快速开始</h2>
+                <ol style="padding-left: 20px; line-height: 2;">
+                    <li>确保已安装 JDK 11+ 和 Maven 3.6+</li>
+                    <li>编译项目: <code style="background: #f5f7fa; padding: 2px 6px; border-radius: 3px;">mvn clean compile</code></li>
+                    <li>运行服务器: <code style="background: #f5f7fa; padding: 2px 6px; border-radius: 3px;">mvn exec:java -Dexec.mainClass="com.example.HttpServer"</code></li>
+                    <li>访问 <a href="/" style="color: var(--primary-color);">http://localhost:8080</a></li>
+                </ol>
+            </section>
+
+            <section class="card">
+                <h2>📝 API 端点</h2>
+                <ul class="feature-list">
+                    <li><strong>GET /</strong> - 首页</li>
+                    <li><strong>GET /hello</strong> - Hello 接口</li>
+                    <li><strong>GET /api/data</strong> - 获取数据（JSON）</li>
+                    <li><strong>POST /api/echo</strong> - 回显请求数据（JSON）</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Netty HTTP Server. 基于 Netty 框架构建。</p>
+        </footer>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

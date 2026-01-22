@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API 演示 - Netty HTTP 服务器</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧪 API 演示</h1>
+            <p class="subtitle">测试 Netty HTTP 服务器的 API 接口</p>
+        </header>
+
+        <nav class="nav-menu">
+            <a href="/" class="nav-item">首页</a>
+            <a href="/static/pages/api-demo.html" class="nav-item active">API 演示</a>
+            <a href="/static/pages/about.html" class="nav-item">关于</a>
+        </nav>
+
+        <main>
+            <div class="api-demo">
+                <!-- GET /api/data 演示 -->
+                <section class="card">
+                    <h2>📊 数据接口 (GET /api/data)</h2>
+                    <p>获取服务器数据，返回 JSON 格式的响应。</p>
+                    <button class="btn" onclick="testDataApi()">发送请求</button>
+                    <div class="response-area">
+                        <div id="data-response" class="response-box">点击按钮发送请求...</div>
+                    </div>
+                </section>
+
+                <!-- POST /api/echo 演示 -->
+                <section class="card">
+                    <h2>🔄 回显接口 (POST /api/echo)</h2>
+                    <p>发送数据到服务器，服务器将原样返回。</p>
+                    <div class="form-group">
+                        <label for="echo-input">输入要回显的内容:</label>
+                        <textarea id="echo-input" placeholder='例如: {"message": "Hello, Netty!"}'></textarea>
+                    </div>
+                    <button class="btn" onclick="testEchoApi()">发送请求</button>
+                    <div class="response-area">
+                        <div id="echo-response" class="response-box">输入内容后点击按钮发送请求...</div>
+                    </div>
+                </section>
+
+                <!-- 自定义请求演示 -->
+                <section class="card">
+                    <h2>🔧 自定义请求</h2>
+                    <p>测试其他 API 端点。</p>
+                    <div class="form-group">
+                        <label for="custom-url">请求 URL:</label>
+                        <input type="text" id="custom-url" placeholder="/api/data" value="/api/data">
+                    </div>
+                    <div class="form-group">
+                        <label for="custom-method">请求方法:</label>
+                        <select id="custom-method" style="width: 100%; padding: 12px; border: 2px solid var(--border-color); border-radius: 6px; font-size: 1em;">
+                            <option value="GET">GET</option>
+                            <option value="POST">POST</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="custom-body">请求体 (JSON):</label>
+                        <textarea id="custom-body" placeholder='{"key": "value"}'></textarea>
+                    </div>
+                    <button class="btn" onclick="testCustomApi()">发送请求</button>
+                    <div class="response-area">
+                        <div id="custom-response" class="response-box">配置请求后点击按钮发送...</div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Netty HTTP Server. 基于 Netty 框架构建。</p>
+        </footer>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/api-demo.js"></script>
+</body>
+</html>
