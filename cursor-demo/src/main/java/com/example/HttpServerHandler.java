@@ -18,6 +18,7 @@ import static io.netty.handler.codec.http.HttpResponseStatus.*;
 
 /**
  * HTTP 请求处理器（API 和路由处理）
+ *
  */
 public class HttpServerHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
     private static final Logger logger = LoggerFactory.getLogger(HttpServerHandler.class);
